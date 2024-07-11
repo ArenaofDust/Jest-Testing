@@ -1,4 +1,4 @@
-const { capitalize, reverseString, calculator } = require('./functions');
+const { capitalize, reverseString, calculator, analyzeArray } = require('./functions');
 
 describe('capitalize', () => {
     test('Capitalizes first letter in string', () => {
@@ -29,4 +29,10 @@ describe('calculator', () => {
         expect(calculator.multiply(3, 3)).toBe(9);
     })
 
+});
+
+describe('analyzeArray', () => {
+    test('analyzearray object values', () => {
+        expect(analyzeArray([1, 8, 3, 4, 2, 6])).toEqual({average: 4, minimum: 1, maximum: 8, length: 6});
+    })
 });
